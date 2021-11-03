@@ -20,3 +20,15 @@ body {
 ul {
     list-style-type: none;
 }
+
+/* heading style */
+
+header {
+    text-align: center;
+    margin: 50px auto;
+}
+
+h1#logo {
+    font-weight: 900;
+    font-size: 400%;
+}
