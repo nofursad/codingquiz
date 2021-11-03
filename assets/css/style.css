@@ -45,3 +45,18 @@ main {
     margin: 20px auto;
     box-shadow:5px 5px 15px 5px #888;
 }
+
+#navBar {
+    /* border: solid 1px black; */
+    display: flex;
+    margin: 0px auto;
+    padding: 10px 0px;
+}
+
+.catagory {
+    flex: 1;
+}
+
+.btnCatagory {
+    font-size: 200%;
+}
