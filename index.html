@@ -11,68 +11,79 @@
 </head>
 <body>
 
-    <!--********** Header **********-->
-    <header>
-        <div id="header-container" class="container">
-            <h1 id="logo">Coding Quiz</h1>
-            <p id="belowLogo">Test your knowledge of coding.</p>
-        </div>
-    </header>
+    <div id="mainContainer">
+        <!--********** Header **********-->
+        <header>
+            <div id="header-container" class="container">
+                <h1 id="logo"><i class="fas fa-laptop-code"></i>Coding Quiz</h1>
+                <!-- <p id="belowLogo">Test your knowledge of coding.</p> -->
+            </div>
+        </header>
 
-    <!--********** Main Body **********-->
-    <main>
-        <div id="bodyContainer" class="container">
-            <div id="navBar">
+        <!--********** Main Body **********-->
+        <main>
+            <div id="bodyContainer" class="container">
+                <div id="navBar">
+                    <div class="catagory">
+                        <button class="btnCatagory">HTML</button>
+                    </div>
+                    <div class="catagory">
+                        <button class="btnCatagory">CSS</button>
+                    </div>
+                    <div class="catagory">
+                        <button class="btnCatagory">JAVASCRIPT</button>
+                    </div>
+                </div>
+
+                <!-- Quiz Area for the question and answer -->
+                <div id="quizArea">
+                    <div id="questionContainer">
+                        <p>Question for quiz will appear here?</p>
+                    </div>
+                    <div id="answerOptionContainer">
+                        <ul>
+                            <li id="optionA" class="option">A. Answer</li>
+                            <li id="optionB" class="option">B. Answer</li>
+                            <li id="optionC" class="option">C. Answer</li>
+                            <li id="optionD" class="option">D. Answer</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Score board area for information about the quiz -->
+                <div id="scoreBoard">
+                    <div id="score">
+                        <p>Score: <span id="scoreUpdate">0</span></p>
+                    </div>
+                    <div id="countDown">
+                        <p>Time: <span id="quizTimer">00.00</span></p>
+                    </div>
+                    <div id="questionNumber">
+                        <p>Question: <span id="questionNum">1</span> / 10</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!--********** Footer **********-->
+        <footer>
+            <div id="copyright">
+                <p>copyright 2021 Coding Quiz</p>
+            </div>
+            <div id="socialNetwork">
                 <ul>
-                    <li class="catagory">HTML</li>
-                    <li class="catagory">CSS</li>
-                    <li class="catagory">JAVASCRIPT</li>
+                    <li class="socialIcon"><i class="fab fa-facebook"></i></li>
+                    <li class="socialIcon"><i class="fab fa-twitter-square"></i></li>
+                    <li class="socialIcon"><i class="fab fa-youtube-square"></i></li>
+                    <li class="socialIcon"><i class="fab fa-instagram"></i></li>
                 </ul>
             </div>
-            <div id="quizArea">
-                <div id="questionContainer">
-                    <p>Question for quiz will appear here?</p>
-                </div>
-                <div id="answerOptionContainer">
-                    <ul>
-                        <li id="optionA">A. Answer</li>
-                        <li id="optionB">B. Answer</li>
-                        <li id="optionC">C. Answer</li>
-                        <li id="optionD">D. Answer</li>
-                    </ul>
-                </div>
-            </div>
-            <div id="scoreBoard">
-                <div id="score">
-                    <p>Score: <span id="scoreUpdate">0</span></p>
-                </div>
-                <div id="countDown">
-                    <p>Time: <span id="quizTimer">00.00</span></p>
-                </div>
-                <div id="questionNumber">
-                    <p>Question: <span id="questionNum">1</span> / 10</p>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <!--********** Footer **********-->
-    <footer>
-        <div id="copyright">
-            <p>copyright 2021 Coding Quiz</p>
-        </div>
-        <div id="socialNetwork">
-            <ul>
-                <li class="socialIcon"><i class="fab fa-facebook"></i></li>
-                <li class="socialIcon"><i class="fab fa-twitter-square"></i></li>
-                <li class="socialIcon"><i class="fab fa-youtube-square"></i></li>
-                <li class="socialIcon"><i class="fab fa-instagram"></i></li>
-            </ul>
-        </div>
-    </footer>
+        </footer>
+    </div>
     
 </body>
 
+    <!-- font awesome script -->
     <script src="https://kit.fontawesome.com/2f0cc599ce.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
 </html>
