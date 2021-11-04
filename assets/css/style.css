@@ -36,7 +36,6 @@ h1#logo {
 /* Main body style */
 
 main {
-    /* border: solid 1px black; */
     width: 70%;
     max-width: 800px;
     height: 65vh;
@@ -65,7 +64,7 @@ main {
     display: inline-block;
     font-size: 200%;
     cursor: pointer;
-    padding: 0 10px;
+    padding: 10px 20px;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -76,24 +75,25 @@ main {
         rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
-.btnActive {
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+.btnActive,
+.btnActive:hover {
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 #questionContainer {
     width: 85%;
     margin: auto;
+    height: 162px;
     padding: 50px 0;
     font-size: 1.5rem;
+    box-sizing: border-box;
 }
 
 #answerOptionContainer {
-    margin-bottom: 100px;
+    height: 355px;
 }
 
-.option {
+.options {
     width: 60%;
     border: solid 1px #ccc;
     margin: 5px auto;
@@ -106,7 +106,7 @@ main {
     cursor: pointer;
 }
 
-.option:hover {
+.options:hover {
     background-color: #f0f2f5;
 }
 

@@ -22,9 +22,9 @@
 
         <!-- Nav bar to select category of quiz -->
                 <div id="navBar">
-                        <div class="category btncategory btnActive">HTML</div>
-                        <div class="category btncategory">CSS</div>
-                        <div class="category btncategory">JAVASCRIPT</div>
+                        <button id="htmlBtn" data-type="html" class="category btncategory btnActive">HTML</button>
+                        <button id="cssBtn" data-type="css" class="category btncategory">CSS</button>
+                        <button id="jsBtn" data-type="javascript" class="category btncategory">JAVASCRIPT</button>
                 </div>
 
         <!--********** Main Body **********-->
@@ -37,24 +37,26 @@
                         <p id="question">Question for quiz will appear here?</p>
                     </div>
                     <div id="answerOptionContainer">
+                        <!-- <input type="radio" name="answer"></input>
+                        <label for="answer" class="options">A. <span class="answers">Answer</span></label> -->
                         <ul>
-                            <li class="option">A. <span class="answers">Answer</span></li>
-                            <li class="option">B. <span class="answers">Answer</span></li>
-                            <li class="option">C. <span class="answers">Answer</span></li>
-                            <li class="option">D. <span class="answers">Answer</span></li>
+                            <li class="options">A. <span class="answers">Answer</span></li>
+                            <li class="options">B. <span class="answers">Answer</span></li>
+                            <li class="options">C. <span class="answers">Answer</span></li>
+                            <li class="options">D. <span class="answers">Answer</span></li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- Score board area for information about the quiz -->
                 <div id="scoreBoard">
-                    <div id="score" class="scoreBoardSection">
-                        <p>Score: <span id="scoreUpdate">0</span></p>
+                    <div class="scoreBoardSection">
+                        <p>Score: <span id="score">0</span></p>
                     </div>
-                    <div id="timer" class="scoreBoardSection">
-                        <p>Time: <span id="quizTimer">00:00</span></p>
+                    <div class="scoreBoardSection">
+                        <p>Time: <span id="Timer">00:00</span></p>
                     </div>
-                    <div id="questionNumber" class="scoreBoardSection">
+                    <div class="scoreBoardSection">
                         <p>Question: <span id="questionNum">1</span> / 10</p>
                     </div>
                 </div>
