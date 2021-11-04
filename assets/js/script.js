@@ -17,6 +17,19 @@ function runQuiz(quizCat){
 }
 
 function changeCategory(quizCat){
+    if (quizCat === "html"){
+        document.getElementById("htmlBtn").className = "category btncategory btnActive";
+        document.getElementById("cssBtn").className = "category btncategory";
+        document.getElementById("jsBtn").className = "category btncategory";
+    } else if (quizCat === "css"){
+        document.getElementById("htmlBtn").className = "category btncategory";
+        document.getElementById("cssBtn").className = "category btncategory btnActive";
+        document.getElementById("jsBtn").className = "category btncategory";
+    } else if (quizCat === "javascript"){
+        document.getElementById("htmlBtn").className = "category btncategory";
+        document.getElementById("cssBtn").className = "category btncategory";
+        document.getElementById("jsBtn").className = "category btncategory btnActive";
+    }
 }
 
 function getCorrectAnswer(){       
