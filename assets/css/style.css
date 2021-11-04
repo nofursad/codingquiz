@@ -54,14 +54,14 @@ main {
     text-align: left;
 }
 
-.catagory,
+.category,
 .scoreBoardSection,
 .footerSection,
 .socialIcon {
     flex: 1;
 }
 
-.btnCatagory {
+.btncategory {
     display: inline-block;
     font-size: 200%;
     cursor: pointer;
@@ -70,7 +70,7 @@ main {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.btnCatagory:hover {
+.btncategory:hover {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
         rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
         rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
