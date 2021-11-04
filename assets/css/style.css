@@ -40,7 +40,7 @@ main {
     width: 70%;
     max-width: 800px;
     height: 65vh;
-    max-height: 500px;
+    max-height: 600px;
     text-align: center;
     margin: 20px auto;
     box-shadow:5px 5px 15px 5px #888;
@@ -69,6 +69,27 @@ main {
     margin: auto;
     padding: 50px 0;
     font-size: 1.5rem;
+}
+
+#answerOptionContainer {
+    margin-bottom: 100px;
+}
+
+.option {
+    width: 60%;
+    border: solid 1px #ccc;
+    margin: 5px auto;
+    line-height: 4rem;
+    border-radius: 5px;
+    text-align: left;
+    padding: 0 20px;
+    background-color: #e7e7e7;
+    box-shadow: inset 1px 1px 0 0 #fff;
+    cursor: pointer;
+}
+
+.option:hover {
+    background-color: #f0f2f5;
 }
 
 #scoreBoard {
