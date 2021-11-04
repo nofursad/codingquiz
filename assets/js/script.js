@@ -19,23 +19,28 @@ function runQuiz(quizCat){
 function changeCategory(quizCat){
 }
 
+function getCorrectAnswer(){       
+}
+
 function checkAnswer(){
 }
 
 function increaseScore(){
-}
-
-function resetCounter(){
+    let score = document.getElementById("score");
+    score.innerText = parseInt(score.innerText) + 1;
 }
 
 function increaseQueNum(){
+    let queNum = document.getElementById("questionNum");
+    queNum.innerText = parseInt(queNum.innerText) + 1;
 }
 
-function getCorrectAnswer(){       
+function resetCounter(){
+    document.getElementById("score").innerText = 0;
+    document.getElementById("questionNum").innerText = 1;
 }
 
-function displayHtmlQuestion(queNum){
-    
+function displayHtmlQuestion(queNum){  
 }
 
 function displayCssQuestion(queNum){
