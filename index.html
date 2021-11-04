@@ -20,11 +20,11 @@
             </div>
         </header>
 
-        <!-- Nav bar to select catagory of quiz -->
+        <!-- Nav bar to select category of quiz -->
                 <div id="navBar">
-                        <div class="catagory btnCatagory btnActive">HTML</div>
-                        <div class="catagory btnCatagory">CSS</div>
-                        <div class="catagory btnCatagory">JAVASCRIPT</div>
+                        <div class="category btncategory btnActive">HTML</div>
+                        <div class="category btncategory">CSS</div>
+                        <div class="category btncategory">JAVASCRIPT</div>
                 </div>
 
         <!--********** Main Body **********-->
@@ -38,10 +38,10 @@
                     </div>
                     <div id="answerOptionContainer">
                         <ul>
-                            <li id="optionA" class="option">A. Answer</li>
-                            <li id="optionB" class="option">B. Answer</li>
-                            <li id="optionC" class="option">C. Answer</li>
-                            <li id="optionD" class="option">D. Answer</li>
+                            <li class="option">A. <span class="answers">Answer</span></li>
+                            <li class="option">B. <span class="answers">Answer</span></li>
+                            <li class="option">C. <span class="answers">Answer</span></li>
+                            <li class="option">D. <span class="answers">Answer</span></li>
                         </ul>
                     </div>
                 </div>
@@ -51,8 +51,8 @@
                     <div id="score" class="scoreBoardSection">
                         <p>Score: <span id="scoreUpdate">0</span></p>
                     </div>
-                    <div id="countDown" class="scoreBoardSection">
-                        <p>Time: <span id="quizTimer">00.00</span></p>
+                    <div id="timer" class="scoreBoardSection">
+                        <p>Time: <span id="quizTimer">00:00</span></p>
                     </div>
                     <div id="questionNumber" class="scoreBoardSection">
                         <p>Question: <span id="questionNum">1</span> / 10</p>
