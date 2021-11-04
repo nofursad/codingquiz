@@ -64,7 +64,21 @@ function displayHtmlQuestion(queNum){
 }
 
 function displayCssQuestion(queNum){
+    let questionDisplay = document.getElementById("question");
+    let answersDisplay = document.getElementsByClassName("answers");
+    let queAndAns = cssQue[queNum];
+    questionDisplay.innerHTML = queAndAns.question;
+    for (let x = 0; x < answersDisplay.length; x++){
+        answersDisplay[x].innerHTML = queAndAns.answers[x].text;
+    };
 }
 
 function displayJsQuestion(queNum){
+    let questionDisplay = document.getElementById("question");
+    let answersDisplay = document.getElementsByClassName("answers");
+    let queAndAns = jsQue[queNum];
+    questionDisplay.innerHTML = queAndAns.question;
+    for (let x = 0; x < answersDisplay.length; x++){
+        answersDisplay[x].innerHTML = queAndAns.answers[x].text;
+    };
 }
