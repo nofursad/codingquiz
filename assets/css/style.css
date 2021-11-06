@@ -21,7 +21,11 @@ ul {
     list-style-type: none;
 }
 
-/* heading style */
+a {
+    text-decoration: none;
+    color: #fff;
+}
+/* header section style */
 
 header {
     text-align: center;
@@ -115,7 +119,7 @@ main {
 }
 
 
-/* Footer style */
+/* Footer section style */
 
 footer {
     position: absolute;
@@ -131,7 +135,7 @@ footer {
     max-width: 800px;
     margin: auto;
     padding: 10px 0px;
-    color: #8C8989;
+    color: #fff;
     text-shadow: 1px 2px 1px #000;
     font-size: 1.2em;
 }
