@@ -7,7 +7,6 @@
     <meta name="description" content="Coding Quiz">
     <meta name="keywords" content="coding quiz, coding, quiz, html, css, javascript">
 
-
     <!-- Linking the stylesheet for the page-->
     <link rel="stylesheet" href="assets/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,15 +19,14 @@
         <header>
             <div id="header-container" class="container">
                 <h1 id="logo"><i class="fas fa-laptop-code"></i>Coding Quiz</h1>
-                <!-- <p id="belowLogo">Test your knowledge of coding.</p> -->
             </div>
         </header>
 
         <!-- Nav bar to select category of quiz -->
                 <div id="navBar">
-                        <button id="htmlBtn" data-type="html" class="category btncategory btnActive">HTML</button>
-                        <button id="cssBtn" data-type="css" class="category btncategory">CSS</button>
-                        <button id="jsBtn" data-type="javascript" class="category btncategory">JAVASCRIPT</button>
+                        <button id="htmlBtn" data-type="html" class="btnCategory btnActive">HTML</button>
+                        <button id="cssBtn" data-type="css" class="btnCategory">CSS</button>
+                        <button id="jsBtn" data-type="javascript" class="btnCategory">JAVASCRIPT</button>
                 </div>
 
         <!--********** Main Body **********-->
@@ -41,8 +39,6 @@
                         <p id="question">Question for quiz will appear here?</p>
                     </div>
                     <div id="answerOptionContainer">
-                        <!-- <input type="radio" name="answer"></input>
-                        <label for="answer" class="options">A. <span class="answers">Answer</span></label> -->
                         <ul>
                             <li class="options">A. <span class="answers">Answer</span></li>
                             <li class="options">B. <span class="answers">Answer</span></li>
@@ -85,10 +81,12 @@
             </div>
         </footer>
     </div>
+
+
+    <!-- Link to js file for the webpage -->
+    <script src="assets/js/script_.js"></script>
+    <!-- link to font awesome icon kit -->
+    <script src="https://kit.fontawesome.com/bb010fc4cb.js" crossorigin="anonymous"></script>
     
 </body>
-
-    <!-- font awesome script -->
-    <script src="https://kit.fontawesome.com/2f0cc599ce.js" crossorigin="anonymous"></script>
-    <script src="assets/js/script.js"></script>
 </html>

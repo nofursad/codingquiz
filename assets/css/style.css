@@ -57,14 +57,14 @@ main {
     text-align: left;
 }
 
-.category,
 .scoreBoardSection,
 .footerSection,
 .socialIcon {
     flex: 1;
 }
 
-.btncategory {
+.btnCategory {
+    flex: 1;
     display: inline-block;
     font-size: 200%;
     cursor: pointer;
@@ -73,10 +73,11 @@ main {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.btncategory:hover {
+.btnCategory:hover {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
         rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
         rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    transform: scale(1.02);
 }
 
 .btnActive,
@@ -112,6 +113,7 @@ main {
 
 .options:hover {
     background-color: #f0f2f5;
+    transform: scale(1.02);
 }
 
 #scoreBoard {
@@ -142,4 +144,18 @@ footer {
 
 .footerSection ul {
     display: flex;
+}
+
+/* Mediaqueries for responsiveness */
+
+@media screen and (max-width: 999px) {
+    #navBar,
+    main,
+    #footerContainer {
+        width: 85%;
+    }
+
+    .options{
+        width: 70%;
+    }
 }
