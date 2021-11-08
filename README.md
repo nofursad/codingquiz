@@ -1,4 +1,4 @@
-![Coding Quiz](ReadMe/cq_logo.png)
+![Coding Quiz](ReadMe/cqLogo.png)
 
 # Coding Quiz
 
@@ -12,7 +12,7 @@ A live demo of this website can be found [here](https://nofursad.github.io/codin
 
 [GitHub Repo](https://github.com/nofursad/codingquiz.git)
 
-![Responsiveness]()
+![Responsiveness](readme/Demo.png)
 
 ---
 
@@ -35,7 +35,7 @@ The main purpose of this website is to test the knowledge of the user on HTML, C
  ### **The Header**
   * The header section only consist of logo for the website with the name of website.
 
-  ![Header](readme/cq_logo.png)
+  ![Header](readme/cqLogo.png)
 
 ### **Navigation Bar**
   * Navigation Bar is just below the header section with 3 buttons.
