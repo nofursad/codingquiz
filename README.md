@@ -4,6 +4,8 @@
 
 Coding Quiz is a place to check the knowledge of a user in 3 specific coding language, **HTML**, **CSS** and **Javascript**. User of a website will have an option to chose from 3 different coding language they want to test their knowledge on. They will be asked 10 questions from the language they selected and at the end of 10 questions, it will display the score to the user. 
 
+---
+
 ## Demo
 
 A live demo of this website can be found [here](https://nofursad.github.io/codingquiz/)
@@ -12,12 +14,13 @@ A live demo of this website can be found [here](https://nofursad.github.io/codin
 
 ![Responsiveness]()
 
+---
 
 ## Strategy
 
 The main purpose of this website is to test the knowledge of the user on HTML, CSS and Javascript programming language. This website is targeted towards the coder like myself where they can check their knowledge on the coding language.
 
-------
+---
 
 ## Technologies
 
@@ -25,9 +28,11 @@ The main purpose of this website is to test the knowledge of the user on HTML, C
 2. CSS3
 3. Javascript
 
+---
+
 ## Features
 
-* **The Header**
+ ### The Header
   * The header section only consist of logo for the website with the name of website.
 
   ![Header](readme/cq_logo.png)
@@ -62,9 +67,38 @@ The main purpose of this website is to test the knowledge of the user on HTML, C
 
   ![Footer](readme/footer.png)
 
-------
+---
 
+## Testing
+
+* I have tested the page in multiple browser (i.e., Safari, Chrome, Firefox) and make sure that it works fine in all of them.
+* I have tested the website for its responsiveness on different screen size device using the devtools device toolbar in chrome browser.
+* I have confirmed that all the text in all section of the website are readable and easy to understand.
 
 ---
 
-Happy coding!
+## Bugs
+
+### Solved Bugs
+When i tested the javascript codes in the jshint.com, I found out that I was missing some of the semicolon after finishing my code.  
+I went back and corrected that in script.js file by adding semicolon wherever it was missing.  
+  
+### Unfixed Bug
+No Unfixed Bugs.  
+  
+## Validator Testing
+* **HTML**: I tested the code through the official **W3C validator** and all test pass without any error.
+
+![Html Validator]()
+  
+* **CSS**:  I tested the code through the official **W3C (Jigsaw) validator** and all test pass without any error.
+
+![Css Validator]()
+  
+* **Javascript**: I tested the javascript code throught the website **JSHINT.COM** and all code pass without any error.
+
+![Js Validator]()
+  
+* **Accessibility**: I have confirmed that texts on the website are easy to read by choosing the right color and fonts. And confirm website is accessible by running it through **lighthouse** in devtools.  
+  
+![Accessibility]()
