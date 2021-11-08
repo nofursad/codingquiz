@@ -57,6 +57,22 @@ function displayJsQue(queNumInt) {
 
  // Function to identify the category of the quiz that is selected buy user.
  function queCatSelect(quizCat){
+    if (quizCat === "html") {
+        htmlBtn.className = "btnCategory btnActive";
+        cssBtn.className = "btnCategory";
+        jsBtn.className = "btnCategory";
+    } else if (quizCat === "css") {
+        htmlBtn.className = "btnCategory";
+        cssBtn.className = "btnCategory btnActive";
+        jsBtn.className = "btnCategory";
+    } else if (quizCat === "javascript") {
+        htmlBtn.className = "btnCategory";
+        cssBtn.className = "btnCategory";
+        jsBtn.className = "btnCategory btnActive";
+    }
+    queNum.innerText = "0";
+    score.innerText = "0";
+    queNumInt = 0;
  }
  
  /**
