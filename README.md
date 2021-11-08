@@ -48,7 +48,7 @@ The main purpose of this website is to test the knowledge of the user on HTML, C
 * **Answer Area**
   * HTML is the category selected by default when user load the page. Answer area will be populated with 4 options for the question that is displayed. When user hover over the answer buttons, it will change the background color and scale to 1.02 times its original size.
 
-  ![Answer Area](readme/ansAread.png)
+  ![Answer Area](readme/ansArea.png)
 
 * **Score Board**
   * User can view their score, the time they took on the quiz and the number of question they have attempted. Score will be updated everytime when user get the answer correct. Time will reset when user change the category. And question number will be updated everything user answer the question.
