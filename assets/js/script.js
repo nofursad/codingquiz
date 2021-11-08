@@ -14,6 +14,13 @@
 
  // Function to display HTML question when HTML category is selected
 function displayHtmlQue(queNumInt) {
+    let que = document.getElementById("question");
+    que.innerText = html[queNumInt].question;
+    let ansOpts = document.getElementsByClassName("answers");
+    for (let x = 0; x < 4; x++){
+        ansOpts[x].innerHTML = html[queNumInt].answers[x].text;
+        ansBtns[x].dataset.correct = html[queNumInt].answers[x].correct;
+    }
 }
 
 // Function to display HTML question when HTML category is selected
