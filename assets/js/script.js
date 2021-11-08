@@ -105,6 +105,15 @@ function displayJsQue(queNumInt) {
   * run the quiz category as per user request.
   */
  function runQuiz(quizCat) {
+    let actQueCats = document.getElementsByClassName("btnCategory");
+    for (let actQueCat of actQueCats){
+        actQueCat.addEventListener("click", function(){
+            let quizCat = actQueCat.getAttribute("data-type");
+            queCatSelect(quizCat);
+            runQuiz(quizCat);
+        });
+    }
+    runQuiz("html");
  }
 
  // Questions for HTML Quiz
