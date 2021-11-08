@@ -53,6 +53,30 @@ function displayJsQue(queNumInt) {
  * After 10 questions, give full result to user and reset the quiz.
  */
  function checkAnswer() {
+    for (let ansBtn of ansBtns) {
+        ansBtn.addEventListener("click", function () {
+            let answer = ansBtn.getAttribute("data-correct");
+            if (answer === "true") {
+                alert("You done it Joshi");
+                queNum.innerText = parseInt(queNum.innerText) + 1;
+                score.innerText = parseInt(score.innerText) + 1;
+                queNumInt++;
+            } else {
+                alert("Answer is wrong but it worked!");
+                queNum.innerText = parseInt(queNum.innerText) + 1;
+                queNumInt++;
+            }
+            if (queNumInt < 10) {
+                displayHtmlQue(queNumInt);
+            } else {
+                alert(`Congrulation, you have socre ${score.innerText} out of 10.`);
+                queNum.innerText = "0";
+                score.innerText = "0";
+                queNumInt = 0;
+                displayHtmlQue(0);
+            }
+        });
+    }
  }
 
  // Function to identify the category of the quiz that is selected buy user.

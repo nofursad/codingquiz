@@ -10,18 +10,34 @@ A live demo of this website can be found [here](https://nofursad.github.io/codin
 
 [GitHub Repo](https://github.com/nofursad/codingquiz.git)
 
-![Responsiveness]
+![Responsiveness]()
 
 
-## Gitpod Reminders
+## Strategy
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-
+The main purpose of this website is to test the knowledge of the user on HTML, CSS and Javascript programming language. This website is targeted towards the coder like myself where they can check their knowledge on the coding language.
 
 ------
 
-## Release History
+## Technologies
+
+1. HTML5
+2. CSS3
+3. Javascript
+
+## Features
+
+* **The Header**
+  * The header section only consist of logo for the website with the name of website.
+
+  ![Header image]()
+
+* **Navigation Bar**
+  * Navigation Bar is just below the header section with 3 buttons.
+  * The buttons are not linked to new page but is programmed using Javascript to get the questions from different coding language.
+  * The event handler in the script.js file listen to click on the button and response to them.
+
+  ![Navigation image]()
 
 
 ------
