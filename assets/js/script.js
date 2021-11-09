@@ -4,13 +4,68 @@
  * Declear constant for DOM elements and global variables which 
  * can be call from different functions.
  */
- const queNum = document.getElementById("questionNum");
+const queNum = document.getElementById("questionNum");
 const score = document.getElementById("score");
 const ansBtns = document.getElementsByClassName("options");
 const htmlBtn = document.getElementById("htmlBtn");
 const cssBtn = document.getElementById("cssBtn");
 const jsBtn = document.getElementById("jsBtn");
 let queNumInt = parseInt(queNum.innerHTML) - 1;
+
+/**
+ * Object with the sweetAlert function to be called on various occation
+ */
+ const sweetAlert = {
+    initialAlert : function() {
+        Swal.fire({
+            title: '<strong><u>Some Rules of this Quiz</u></strong>',
+            icon: 'info',
+            html:
+                '1. You will have only 15 seconds per each question. <br>' +
+                '2. Once you select your answer, it can’t be undone. <br>' +
+                '3. You can’t select any option once time goes off. <br>' +
+                '4. You’ll get points on the basis of your correct answers. <br>'
+            ,
+            showCloseButton: true,
+            width: '40rem',
+            focusConfirm: false,
+            confirmButtonText:
+                '<i class="fa fa-thumbs-up"></i> Lets Start!',
+        })
+    },
+    correctAnsAlert : function() {
+        Swal.fire({
+            icon: 'success',
+            title: 'Good job!',
+            text: 'You selected the Correct Answer!',
+            confirmButtonColor: 'rgba(60,179,113, 0.7)'
+        })
+    },
+    incorrectAnsAlert : function() {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops!',
+            text: 'You selected the Incorrect Answer!',
+            confirmButtonColor: 'rgba(220,20,60, 0.6)'
+        });
+    },
+    congratulation: function(userScore) {
+        Swal.fire({
+            // title: '<strong><u>Some Rules of this Quiz</u></strong>',
+            title: '<h1></strong><i style="color:#66C7F4" class="fas fa-crown"></i></h1>',
+            html:
+                `You have completed the Quiz!<br>` +
+                `<br>` +
+                `You have socred ${userScore} out of 10.`
+            ,
+            showCloseButton: true,
+            width: '40rem',
+            focusConfirm: false,
+            confirmButtonText:
+                '<i class="fa fa-thumbs-up"></i> Lets try again!',
+        });
+    }
+}
 
  // Function to display HTML question when HTML category is selected
 function displayHtmlQue(queNumInt) {
