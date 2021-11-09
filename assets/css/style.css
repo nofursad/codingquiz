@@ -71,13 +71,14 @@ main {
     padding: 10px 20px;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: transform 500ms;
 }
 
 .btnCategory:hover {
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
         rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    transform: scale(1.02);
+        rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
+    transform: scale(1.05);
 }
 
 .btnActive,
@@ -118,6 +119,8 @@ main {
 
 #scoreBoard {
     display: flex;
+    text-align: left;
+    padding: 0px 10px;
 }
 
 
@@ -158,4 +161,103 @@ footer {
     .options{
         width: 70%;
     }
+}
+
+@media screen and (max-width: 705px) {
+    #navBar,
+    main,
+    #footerContainer,
+    .options {
+        width: 90%;
+    }
+
+    #footerContainer {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 565px) {
+    .btnCategory {
+        font-size: 150%;
+    }
+
+    h1#logo {
+        font-size: 300%;
+    }
+
+    header {
+        margin: 20px auto;
+    }
+
+    main {
+        height: 430px;
+    }
+
+    #navBar,
+    main,
+    #questionContainer,
+    #footerContainer {
+        width: 100%;
+    }
+
+    #questionContainer {
+        height: 100px;
+        padding: 20px 5px;
+        font-size: 1.3rem;
+    }
+
+    #answerOptionContainer {
+        height: 300px;
+    }
+
+    #footerContainer {
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 465px) {
+    header {
+        margin: 10px auto;
+    }
+
+    h1#logo {
+        font-size: 225%;
+    }
+
+    .btnCategory {
+        font-size: 80%;
+    }
+
+    main {
+        height: 310px;
+    }
+
+    #questionContainer {
+        font-size: 1.0rem;
+        height: 65px;
+    }
+
+    #answerOptionContainer {
+        height: 220px;
+    }
+
+    .options {
+        line-height: 1.5rem;
+        padding: 10px 10px;
+        font-size: 0.7rem;
+    }
+
+    #scoreBoard {
+        font-size: 0.7rem;
+    }
+
+    .swal2-popup {
+        font-size: 0.7rem !important;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #questionContainer {
+        font-size: 0.9rem;
+    }    
 }
