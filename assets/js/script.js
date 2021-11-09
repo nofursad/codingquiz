@@ -10,7 +10,14 @@
  const htmlBtn = document.getElementById("htmlBtn");
  const cssBtn = document.getElementById("cssBtn");
  const jsBtn = document.getElementById("jsBtn");
+ let mainCont = document.querySelector("main");
+ let mainContWidth = mainCont.offsetWidth;
+ let timer = document.getElementById("sec");
+ let timeLine = document.getElementById("timeLine");
  let queNumInt = parseInt(queNum.innerHTML) - 1;
+ let counter, counterLine;
+ let timerValue = 30;
+ let widthValue = 0;
  
  /**
   * Questions for HTML Quiz
@@ -309,7 +316,7 @@
              title: '<strong><u>Some Rules of this Quiz</u></strong>',
              icon: 'info',
              html:
-                 '1. You will have only 15 seconds per each question. <br>' +
+                 '1. You will have only 30 seconds per each question. <br>' +
                  '2. Once you select your answer, it can’t be undone. <br>' +
                  '3. You can’t select any option once time goes off. <br>' +
                  '4. You’ll get points on the basis of your correct answers. <br>'
@@ -319,7 +326,14 @@
              focusConfirm: false,
              confirmButtonText:
                  '<i class="fa fa-thumbs-up"></i> Lets Start!',
-         })
+         }).then((result) => {
+            if (result.isConfirmed) {
+                clearInterval(counter);
+                starTimer(timerValue);
+                // clearInterval(counterLine);
+                // starTimerLine(widthValue, mainContWidth);
+            }
+          })
      },
      correctAnsAlert : function() {
          Swal.fire({
@@ -327,7 +341,12 @@
              title: 'Good job!',
              text: 'You selected the Correct Answer!',
              confirmButtonColor: 'rgba(60,179,113, 0.7)'
-         })
+         }).then((result) => {
+            if (result.isConfirmed) {
+                clearInterval(counter);
+                starTimer(timerValue);
+            }
+          })
      },
      incorrectAnsAlert : function() {
          Swal.fire({
@@ -335,7 +354,12 @@
              title: 'Oops!',
              text: 'You selected the Incorrect Answer!',
              confirmButtonColor: 'rgba(220,20,60, 0.6)'
-         });
+         }).then((result) => {
+            if (result.isConfirmed) {
+                clearInterval(counter);
+                starTimer(timerValue);
+            }
+          })
      },
      congratulation: function(userScore) {
          Swal.fire({
@@ -351,7 +375,12 @@
              focusConfirm: false,
              confirmButtonText:
                  '<i class="fa fa-thumbs-up"></i> Lets try again!',
-         });
+         }).then((result) => {
+            if (result.isConfirmed) {
+                clearInterval(counter);
+                starTimer(timerValue);
+            }
+          })
      }
  }
  
@@ -465,6 +494,39 @@
          displayJsQue(queNumInt);
      }
  }
+
+ /**
+  * Count down timer function to be used in each question.
+  */
+ function starTimer(time){
+     counter = setInterval(countTimer, 1000);
+     function countTimer(){
+         timer.innerText = time;
+         time--;
+         if(time < 9) {
+             let addZero = timer.innerText;
+             timer.innerText = "0" + addZero;
+         }
+         if(time < 0){
+             clearInterval(counter);
+             timer.innerText = "00";
+         }
+     }
+ }
+
+//  /**
+//   * Timer line that goes alone with time indicating the time
+//   */
+//   function starTimerLine(time, mainContWidth){
+//     counterLine = setInterval(countTimer, 100);
+//     function countTimer(){
+//         time += 1;
+//         timeLine.style.width = time + "px";
+//         if(time > mainContWidth) {
+//             clearInterval(counterLine);
+//         }
+//     }
+// }
  
  /**
   * Waiting for DOM content to finish loading before running the quiz.
@@ -479,9 +541,11 @@
              let quizCat = actQueCat.getAttribute("data-type");
              queCatSelect(quizCat);
              runQuiz(quizCat);
+            //  starTimer(30);
          });
      }
      runQuiz("html");
+    //  starTimer(30);
  });
  
  checkAnswer();
