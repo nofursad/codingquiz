@@ -4,13 +4,13 @@
  * Declear constant for DOM elements and global variables which 
  * can be call from different functions.
  */
- let queNum = document.getElementById("questionNum");
- let queNumInt = parseInt(queNum.innerHTML) - 1;
- let score = document.getElementById("score");
- let ansBtns = document.getElementsByClassName("options");
- let htmlBtn = document.getElementById("htmlBtn");
- let cssBtn = document.getElementById("cssBtn");
- let jsBtn = document.getElementById("jsBtn");
+ const queNum = document.getElementById("questionNum");
+const score = document.getElementById("score");
+const ansBtns = document.getElementsByClassName("options");
+const htmlBtn = document.getElementById("htmlBtn");
+const cssBtn = document.getElementById("cssBtn");
+const jsBtn = document.getElementById("jsBtn");
+let queNumInt = parseInt(queNum.innerHTML) - 1;
 
  // Function to display HTML question when HTML category is selected
 function displayHtmlQue(queNumInt) {
