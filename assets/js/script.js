@@ -20,294 +20,6 @@
  let widthValue = 0;
  
  /**
-  * Questions for HTML Quiz
-  */
- const html = [
-     {
-         question: "HTML Boy spends 7 years being the 3rd wheel.",
-         answers: [
-             { text: "Harry Potter and the Deathly Hollows", correct: true },
-             { text: "Twilight", correct: false },
-             { text: "Sherlock Holmes", correct: false },
-             { text: "Star Wars a New Hope", correct: false }
-         ]
-     },
-     {
-         question: "Talking frog convinces son to kill his dad.",
-         answers: [
-             { text: "The Princess and the Frog", correct: false },
-             { text: "Star Wars the Empire Strikes Back", correct: true },
-             { text: "The Muppets Christmas Carol", correct: false },
-             { text: "Shrek", correct: false }
-         ]
-     },
-     {
-         question: "A guy that is alone in the woods kisses a dead body while 7 other guys watch.",
-         answers: [
-             { text: "Sleeping Beauty", correct: false },
-             { text: "Sleepy Hollow", correct: false },
-             { text: "Snow White and the Seven dwarfs", correct: true },
-             { text: "The Corpse Bride", correct: false }
-         ]
-     },
-     {
-         question: "A family's AirBnB experience goes very wrong.",
-         answers: [
-             { text: "The Shining", correct: true },
-             { text: "Room 237", correct: false },
-             { text: "Cabin in the Woods", correct: false },
-             { text: "The Evil Dead", correct: false }
-         ]
-     },
-     {
-         question: "A series of naps.",
-         answers: [
-             { text: "The Matrix", correct: false },
-             { text: "Avatar", correct: false },
-             { text: "Sucker Punch", correct: false },
-             { text: "Inception", correct: true }
-         ]
-     },
-     {
-         question: "Cancer survivor never loses his sense of humor.",
-         answers: [
-             { text: "50/50", correct: false },
-             { text: "Deadpool", correct: true },
-             { text: "The fault in our Stars", correct: false },
-             { text: "Bucket List", correct: false }
-         ]
-     },
-     {
-         question: "Woman abandons all her standards to win back a horny teenager with greasy hair.",
-         answers: [
-             { text: "Grease", correct: true },
-             { text: "Loser", correct: false },
-             { text: "American Pie", correct: false },
-             { text: "Not Another Teen Movie", correct: false }
-         ]
-     },
-     {
-         question: "A depressed office worker joins a cult and destabilizes the government.",
-         answers: [
-             { text: "Fight Club", correct: false },
-             { text: "V for Vendetta", correct: false },
-             { text: "Blade Runner", correct: false },
-             { text: "The Matrix", correct: true }
-         ]
-     },
-     {
-         question: "Divorced man discovers he is trans, loses custody of his children.",
-         answers: [
-             { text: "Big Momma's House", correct: false },
-             { text: "White Chicks", correct: false },
-             { text: "Mrs Doubtfire", correct: true },
-             { text: "Mr Nanny", correct: false }
-         ]
-     },
-     {
-         question: "A beautiful princess gets catfished.",
-         answers: [
-             { text: "Beauty and the Beast", correct: false },
-             { text: "Cinderella", correct: false },
-             { text: "Shrek", correct: false },
-             { text: "Aladdin", correct: true }
-         ]
-     }
- ];
- 
- /**
-  * Questions for CSS Quiz
-  */
- const css = [
-     {
-         question: "CSS Boy spends 7 years being the 3rd wheel.",
-         answers: [
-             { text: "Harry Potter and the Deathly Hollows", correct: false },
-             { text: "Twilight", correct: true },
-             { text: "Sherlock Holmes", correct: false },
-             { text: "Star Wars a New Hope", correct: false }
-         ]
-     },
-     {
-         question: "Talking frog convinces son to kill his dad.",
-         answers: [
-             { text: "The Princess and the Frog", correct: false },
-             { text: "Star Wars the Empire Strikes Back", correct: true },
-             { text: "The Muppets Christmas Carol", correct: false },
-             { text: "Shrek", correct: false }
-         ]
-     },
-     {
-         question: "A guy that is alone in the woods kisses a dead body while 7 other guys watch.",
-         answers: [
-             { text: "Sleeping Beauty", correct: false },
-             { text: "Sleepy Hollow", correct: false },
-             { text: "Snow White and the Seven dwarfs", correct: true },
-             { text: "The Corpse Bride", correct: false }
-         ]
-     },
-     {
-         question: "A family's AirBnB experience goes very wrong.",
-         answers: [
-             { text: "The Shining", correct: true },
-             { text: "Room 237", correct: false },
-             { text: "Cabin in the Woods", correct: false },
-             { text: "The Evil Dead", correct: false }
-         ]
-     },
-     {
-         question: "A series of naps.",
-         answers: [
-             { text: "The Matrix", correct: false },
-             { text: "Avatar", correct: false },
-             { text: "Sucker Punch", correct: false },
-             { text: "Inception", correct: true }
-         ]
-     },
-     {
-         question: "Cancer survivor never loses his sense of humor.",
-         answers: [
-             { text: "50/50", correct: false },
-             { text: "Deadpool", correct: true },
-             { text: "The fault in our Stars", correct: false },
-             { text: "Bucket List", correct: false }
-         ]
-     },
-     {
-         question: "Woman abandons all her standards to win back a horny teenager with greasy hair.",
-         answers: [
-             { text: "Grease", correct: true },
-             { text: "Loser", correct: false },
-             { text: "American Pie", correct: false },
-             { text: "Not Another Teen Movie", correct: false }
-         ]
-     },
-     {
-         question: "A depressed office worker joins a cult and destabilizes the government.",
-         answers: [
-             { text: "Fight Club", correct: false },
-             { text: "V for Vendetta", correct: false },
-             { text: "Blade Runner", correct: false },
-             { text: "The Matrix", correct: true }
-         ]
-     },
-     {
-         question: "Divorced man discovers he is trans, loses custody of his children.",
-         answers: [
-             { text: "Big Momma's House", correct: false },
-             { text: "White Chicks", correct: false },
-             { text: "Mrs Doubtfire", correct: true },
-             { text: "Mr Nanny", correct: false }
-         ]
-     },
-     {
-         question: "A beautiful princess gets catfished.",
-         answers: [
-             { text: "Beauty and the Beast", correct: false },
-             { text: "Cinderella", correct: false },
-             { text: "Shrek", correct: false },
-             { text: "Aladdin", correct: true }
-         ]
-     }
- ];
- 
- /**
-  * Questions for JAVASCRIPT Quiz
-  */
- const javascript = [
-     {
-         question: "JAVASCRIPT Boy spends 7 years being the 3rd wheel.",
-         answers: [
-             { text: "Harry Potter and the Deathly Hollows", correct: false },
-             { text: "Twilight", correct: false },
-             { text: "Sherlock Holmes", correct: true },
-             { text: "Star Wars a New Hope", correct: false }
-         ]
-     },
-     {
-         question: "Talking frog convinces son to kill his dad.",
-         answers: [
-             { text: "The Princess and the Frog", correct: false },
-             { text: "Star Wars the Empire Strikes Back", correct: true },
-             { text: "The Muppets Christmas Carol", correct: false },
-             { text: "Shrek", correct: false }
-         ]
-     },
-     {
-         question: "A guy that is alone in the woods kisses a dead body while 7 other guys watch.",
-         answers: [
-             { text: "Sleeping Beauty", correct: false },
-             { text: "Sleepy Hollow", correct: false },
-             { text: "Snow White and the Seven dwarfs", correct: true },
-             { text: "The Corpse Bride", correct: false }
-         ]
-     },
-     {
-         question: "A family's AirBnB experience goes very wrong.",
-         answers: [
-             { text: "The Shining", correct: true },
-             { text: "Room 237", correct: false },
-             { text: "Cabin in the Woods", correct: false },
-             { text: "The Evil Dead", correct: false }
-         ]
-     },
-     {
-         question: "A series of naps.",
-         answers: [
-             { text: "The Matrix", correct: false },
-             { text: "Avatar", correct: false },
-             { text: "Sucker Punch", correct: false },
-             { text: "Inception", correct: true }
-         ]
-     },
-     {
-         question: "Cancer survivor never loses his sense of humor.",
-         answers: [
-             { text: "50/50", correct: false },
-             { text: "Deadpool", correct: true },
-             { text: "The fault in our Stars", correct: false },
-             { text: "Bucket List", correct: false }
-         ]
-     },
-     {
-         question: "Woman abandons all her standards to win back a horny teenager with greasy hair.",
-         answers: [
-             { text: "Grease", correct: true },
-             { text: "Loser", correct: false },
-             { text: "American Pie", correct: false },
-             { text: "Not Another Teen Movie", correct: false }
-         ]
-     },
-     {
-         question: "A depressed office worker joins a cult and destabilizes the government.",
-         answers: [
-             { text: "Fight Club", correct: false },
-             { text: "V for Vendetta", correct: false },
-             { text: "Blade Runner", correct: false },
-             { text: "The Matrix", correct: true }
-         ]
-     },
-     {
-         question: "Divorced man discovers he is trans, loses custody of his children.",
-         answers: [
-             { text: "Big Momma's House", correct: false },
-             { text: "White Chicks", correct: false },
-             { text: "Mrs Doubtfire", correct: true },
-             { text: "Mr Nanny", correct: false }
-         ]
-     },
-     {
-         question: "A beautiful princess gets catfished.",
-         answers: [
-             { text: "Beauty and the Beast", correct: false },
-             { text: "Cinderella", correct: false },
-             { text: "Shrek", correct: false },
-             { text: "Aladdin", correct: true }
-         ]
-     }
- ];
- 
- /**
   * Object with the sweetAlert function to be called on various occation
   */
  const sweetAlert = {
@@ -385,41 +97,18 @@
  }
  
  /**
-  * Function to display HTML question when HTML category is selected
+  * Function to display question of the selected Category
+  * function will take 2 parameter, quizCat and queNumInt and
+  * access the question array to retrive the question and 
+  * answer
   */
- function displayHtmlQue(queNumInt) {
+ function disQue(quizCat, queNumInt) {
      let que = document.getElementById("question");
-     que.innerText = html[queNumInt].question;
+     que.innerText = questions[quizCat][queNumInt].question;
      let ansOpts = document.getElementsByClassName("answers");
      for (let x = 0; x < 4; x++){
-         ansOpts[x].innerHTML = html[queNumInt].answers[x].text;
-         ansBtns[x].dataset.correct = html[queNumInt].answers[x].correct;
-     }
- }
- 
- /**
-  * Function to display HTML question when CSS category is selected
-  */
- function displayCssQue(queNumInt) {
-     let que = document.getElementById("question");
-     que.innerText = css[queNumInt].question;
-     let ansOpts = document.getElementsByClassName("answers");
-     for (let x = 0; x < 4; x++) {
-         ansOpts[x].innerHTML = css[queNumInt].answers[x].text;
-         ansBtns[x].dataset.correct = css[queNumInt].answers[x].correct;
-     }
- }
- 
- /**
-  * Function to display HTML question when Javascript category is selected
-  */
- function displayJsQue(queNumInt) {
-     let que = document.getElementById("question");
-     que.innerText = javascript[queNumInt].question;
-     let ansOpts = document.getElementsByClassName("answers");
-     for (let x = 0; x < 4; x++) {
-         ansOpts[x].innerHTML = javascript[queNumInt].answers[x].text;
-         ansBtns[x].dataset.correct = javascript[queNumInt].answers[x].correct;
+         ansOpts[x].innerHTML = questions[quizCat][queNumInt].answers[x].text;
+         ansBtns[x].dataset.correct = questions[quizCat][queNumInt].answers[x].correct;
      }
  }
  
@@ -485,14 +174,8 @@
   * Get the category of the quiz when the DOM is loaded and
   * run the quiz category as per user request.
   */
- function runQuiz(quizCat) {
-     if (quizCat === "html") {
-         displayHtmlQue(queNumInt);
-     } else if (quizCat === "css") {
-         displayCssQue(queNumInt);
-     } else if (quizCat === "javascript") {
-         displayJsQue(queNumInt);
-     }
+ function runQuiz(quizCat, queNumInt) {
+     disQue(quizCat, queNumInt);
  }
 
  /**
@@ -540,12 +223,10 @@
          actQueCat.addEventListener("click", function(){
              let quizCat = actQueCat.getAttribute("data-type");
              queCatSelect(quizCat);
-             runQuiz(quizCat);
-            //  starTimer(30);
+             runQuiz(quizCat, queNumInt);
          });
      }
-     runQuiz("html");
-    //  starTimer(30);
+     runQuiz("html", queNumInt);
  });
  
  checkAnswer();
