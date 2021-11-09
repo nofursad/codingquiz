@@ -18,6 +18,7 @@
  let counter, counterLine;
  let timerValue = 30;
  let widthValue = 0;
+ let quizCat = "html";
  
  /**
   * Object with the sweetAlert function to be called on various occation
@@ -25,19 +26,19 @@
  const sweetAlert = {
      initialAlert : function() {
          Swal.fire({
-             title: '<strong><u>Some Rules of this Quiz</u></strong>',
-             icon: 'info',
+             title: "<strong><u>Some Rules of this Quiz</u></strong>",
+             icon: "info",
              html:
-                 '1. You will have only 30 seconds per each question. <br>' +
-                 '2. Once you select your answer, it can’t be undone. <br>' +
-                 '3. You can’t select any option once time goes off. <br>' +
-                 '4. You’ll get points on the basis of your correct answers. <br>'
+                 "1. You will have only 30 seconds per each question. <br>" +
+                 "2. Once you select your answer, it can’t be undone. <br>" +
+                 "3. You can’t select any option once time goes off. <br>" +
+                 "4. You’ll get points on the basis of your correct answers. <br>"
              ,
              showCloseButton: true,
-             width: '40rem',
+             width: "40rem",
              focusConfirm: false,
              confirmButtonText:
-                 '<i class="fa fa-thumbs-up"></i> Lets Start!',
+                 "<i class='fa fa-thumbs-up'></i> Lets Start!",
          }).then((result) => {
             if (result.isConfirmed) {
                 clearInterval(counter);
@@ -49,10 +50,10 @@
      },
      correctAnsAlert : function() {
          Swal.fire({
-             icon: 'success',
-             title: 'Good job!',
-             text: 'You selected the Correct Answer!',
-             confirmButtonColor: 'rgba(60,179,113, 0.7)'
+             icon: "success",
+             title: "Good job!",
+             text: "You selected the Correct Answer!",
+             confirmButtonColor: "rgba(60,179,113, 0.7)"
          }).then((result) => {
             if (result.isConfirmed) {
                 clearInterval(counter);
@@ -62,10 +63,10 @@
      },
      incorrectAnsAlert : function() {
          Swal.fire({
-             icon: 'error',
-             title: 'Oops!',
-             text: 'You selected the Incorrect Answer!',
-             confirmButtonColor: 'rgba(220,20,60, 0.6)'
+             icon: "error",
+             title: "Oops!",
+             text: "You selected the Incorrect Answer!",
+             confirmButtonColor: "rgba(220,20,60, 0.6)"
          }).then((result) => {
             if (result.isConfirmed) {
                 clearInterval(counter);
@@ -75,18 +76,18 @@
      },
      congratulation: function(userScore) {
          Swal.fire({
-             // title: '<strong><u>Some Rules of this Quiz</u></strong>',
-             title: '<h1></strong><i style="color:#66C7F4" class="fas fa-crown"></i></h1>',
+             // title: "<strong><u>Some Rules of this Quiz</u></strong>",
+             title: "<h1></strong><i style='color:#66C7F4' class='fas fa-crown'></i></h1>",
              html:
                  `You have completed the Quiz!<br>` +
                  `<br>` +
                  `You have socred ${userScore} out of 10.`
              ,
              showCloseButton: true,
-             width: '40rem',
+             width: "40rem",
              focusConfirm: false,
              confirmButtonText:
-                 '<i class="fa fa-thumbs-up"></i> Lets try again!',
+                 "<i class='fa fa-thumbs-up'></i> Lets try again!",
          }).then((result) => {
             if (result.isConfirmed) {
                 clearInterval(counter);
@@ -134,14 +135,14 @@
                  queNumInt++;
              }
              if (queNumInt < 10) {
-                 displayHtmlQue(queNumInt);
+                 disQue(quizCat, queNumInt);
              } else {
                  let userScore = document.getElementById("score").innerText;
                  sweetAlert.congratulation(userScore);
                  queNum.innerText = "1";
                  score.innerText = "0";
                  queNumInt = 0;
-                 displayHtmlQue(0);
+                 disQue(quizCat, 0);
              }
          });
      }
@@ -167,6 +168,8 @@
      queNum.innerText = "1";
      score.innerText = "0";
      queNumInt = 0;
+     clearInterval(counter);
+     starTimer(timerValue);
  }
  
  /**
@@ -176,6 +179,7 @@
   */
  function runQuiz(quizCat, queNumInt) {
      disQue(quizCat, queNumInt);
+     starTimer(timerValue);
  }
 
  /**
@@ -193,6 +197,10 @@
          if(time < 0){
              clearInterval(counter);
              timer.innerText = "00";
+             alert("Sorry, your time is over.")
+             queNum.innerText = parseInt(queNum.innerText) + 1;
+             queNumInt++;
+             runQuiz(quizCat, queNumInt);
          }
      }
  }
@@ -221,7 +229,7 @@
      let actQueCats = document.getElementsByClassName("btnCategory");
      for (let actQueCat of actQueCats){
          actQueCat.addEventListener("click", function(){
-             let quizCat = actQueCat.getAttribute("data-type");
+             quizCat = actQueCat.getAttribute("data-type");
              queCatSelect(quizCat);
              runQuiz(quizCat, queNumInt);
          });
