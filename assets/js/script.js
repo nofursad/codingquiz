@@ -67,7 +67,9 @@ let queNumInt = parseInt(queNum.innerHTML) - 1;
     }
 }
 
- // Function to display HTML question when HTML category is selected
+/**
+ * Function to display HTML question when HTML category is selected
+ */
 function displayHtmlQue(queNumInt) {
     let que = document.getElementById("question");
     que.innerText = html[queNumInt].question;
@@ -78,7 +80,9 @@ function displayHtmlQue(queNumInt) {
     }
 }
 
-// Function to display HTML question when HTML category is selected
+/**
+ * Function to display HTML question when CSS category is selected
+ */
 function displayCssQue(queNumInt) {
     let que = document.getElementById("question");
     que.innerText = css[queNumInt].question;
@@ -89,7 +93,9 @@ function displayCssQue(queNumInt) {
     }
 }
 
-// Function to display HTML question when HTML category is selected
+/**
+ * Function to display HTML question when Javascript category is selected
+ */
 function displayJsQue(queNumInt) {
     let que = document.getElementById("question");
     que.innerText = javascript[queNumInt].question;
@@ -112,27 +118,28 @@ function displayJsQue(queNumInt) {
         ansBtn.addEventListener("click", function () {
             let answer = ansBtn.getAttribute("data-correct");
             if (answer === "true") {
-                alert("You done it Joshi");
+                sweetAlert.correctAnsAlert();
                 queNum.innerText = parseInt(queNum.innerText) + 1;
                 score.innerText = parseInt(score.innerText) + 1;
                 queNumInt++;
             } else {
-                alert("Answer is wrong but it worked!");
+                sweetAlert.incorrectAnsAlert();
                 queNum.innerText = parseInt(queNum.innerText) + 1;
                 queNumInt++;
             }
             if (queNumInt < 10) {
                 displayHtmlQue(queNumInt);
             } else {
-                alert(`Congrulation, you have socre ${score.innerText} out of 10.`);
-                queNum.innerText = "0";
+                let userScore = document.getElementById("score").innerText;
+                sweetAlert.congratulation(userScore);
+                queNum.innerText = "1";
                 score.innerText = "0";
                 queNumInt = 0;
                 displayHtmlQue(0);
             }
         });
     }
- }
+}
 
  // Function to identify the category of the quiz that is selected buy user.
  function queCatSelect(quizCat){
@@ -154,22 +161,20 @@ function displayJsQue(queNumInt) {
     queNumInt = 0;
  }
  
- /**
-  * The main quiz function which connect other function together.
-  * Get the category of the quiz when the DOM is loaded and
-  * run the quiz category as per user request.
-  */
+/**
+ * The main quiz function which connect other function together.
+ * Get the category of the quiz when the DOM is loaded and
+ * run the quiz category as per user request.
+ */
  function runQuiz(quizCat) {
-    let actQueCats = document.getElementsByClassName("btnCategory");
-    for (let actQueCat of actQueCats){
-        actQueCat.addEventListener("click", function(){
-            let quizCat = actQueCat.getAttribute("data-type");
-            queCatSelect(quizCat);
-            runQuiz(quizCat);
-        });
+    if (quizCat === "html") {
+        displayHtmlQue(queNumInt);
+    } else if (quizCat === "css") {
+        displayCssQue(queNumInt);
+    } else if (quizCat === "javascript") {
+        displayJsQue(queNumInt);
     }
-    runQuiz("html");
- }
+}
 
  // Questions for HTML Quiz
 const html = [
