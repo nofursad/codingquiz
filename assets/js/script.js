@@ -176,6 +176,26 @@ function displayJsQue(queNumInt) {
     }
 }
 
+/**
+ * Waiting for DOM content to finish loading before running the quiz.
+ * Add the event listener to btnCategory class elements to get the 
+ * quiz category to run the quiz.
+ */
+document.addEventListener("DOMContentLoaded", function(){
+    sweetAlert.initialAlert();
+    let actQueCats = document.getElementsByClassName("btnCategory");
+    for (let actQueCat of actQueCats){
+        actQueCat.addEventListener("click", function(){
+            let quizCat = actQueCat.getAttribute("data-type");
+            queCatSelect(quizCat);
+            runQuiz(quizCat);
+        });
+    }
+    runQuiz("html");
+});
+
+checkAnswer();
+
  // Questions for HTML Quiz
 const html = [
     {
