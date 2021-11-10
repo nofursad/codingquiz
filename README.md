@@ -24,8 +24,21 @@ A live demo of this website can be found [here](https://nofursad.github.io/codin
 * [Credits](#credits)
 
 ## User Experience (UX)
+* ### User Stories
+  1. First time User
+   * As a first time user, I want to be able to understand the main purpose of the website.
+   * I want to be able to easily use the website for the purpose it was build for.
+   * I want to be able to do the quiz of different category.
+   * I want to be able to check my scores after I answered all the questions of the quiz.
+  
+  2. Returning User
+   * As a returning visiter, I want to be able to quickly take the quiz.
+   * I want to be able to check my scores.
 
-The main purpose of this website is to test the knowledge of the user on HTML, CSS and Javascript programming language. This website is targeted towards the coder like myself where they can check their knowledge on the coding language.
+  3. Frequent User
+   * As a frequent user, I want to be able to store my scores.
+   * I want to be able to compare my scores with my previous scores.
+
 
 ---
 
@@ -82,6 +95,13 @@ The main purpose of this website is to test the knowledge of the user on HTML, C
 
   ![Footer](readme/footer.png)
 
+### **Features which could be implemented in the future**
+* Progress Bar for timer
+ * A progress bar can be added in the scoreboard area as a visual representation of the time available to user to answer the questions.
+* Icon and Popup Box for more Information
+ * A icon can be added on the page which will bring the popup box with more information and option for the user.
+* Option to Store scores
+ * An user can give their name and the score can be stored so when user take the quiz again, they can compare the scores.
 ---
 
 ## Testing
@@ -152,3 +172,15 @@ You can access the live site via the following link [A Game of Snake](https://gi
 3. Click on the HTTPs and click on copy icon next to the link.
 4. Open a GitBash terminal / build-in terminal and open a directory where you want to clone it.
 5. Type "git clone" them paste in the link that was copied from git and hit Enter to start the cloning process. 
+
+## Credits
+
+### Content
+* All the questions for the quiz was created by developer.
+### Code
+* Code for the popup boxes was taken from [sweetAlert2](https://sweetalert2.github.io/#examples).
+* Code for the box-shadows was take from the [Getcssscan.com](https://getcssscan.com/css-box-shadow-examples).
+
+### Acknowledgments
+* All member of slack community who helped and adviced me when I was stuck.
+* Thank you to my mento Brian Macharia who was very patient while helping me to help myself by providing lots of pointers and hints. He also redirected me to different resources which was very usefull in this project. 
