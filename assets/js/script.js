@@ -10,14 +10,10 @@
  const htmlBtn = document.getElementById("htmlBtn");
  const cssBtn = document.getElementById("cssBtn");
  const jsBtn = document.getElementById("jsBtn");
- let mainCont = document.querySelector("main");
- let mainContWidth = mainCont.offsetWidth;
- let timer = document.getElementById("sec");
- let timeLine = document.getElementById("timeLine");
+ const timer = document.getElementById("sec");
  let queNumInt = parseInt(queNum.innerHTML) - 1;
- let counter, counterLine;
+ let counter;
  let timerValue = 30;
- let widthValue = 0;
  let quizCat = "html";
  
  /**
@@ -217,20 +213,6 @@
          }
      }
  }
- 
- //  /**
- //   * Timer line that goes alone with time indicating the time
- //   */
- //   function starTimerLine(time, mainContWidth){
- //     counterLine = setInterval(countTimer, 100);
- //     function countTimer(){
- //         time += 1;
- //         timeLine.style.width = time + "px";
- //         if(time > mainContWidth) {
- //             clearInterval(counterLine);
- //         }
- //     }
- // }
  
  /**
   * Waiting for DOM content to finish loading before running the quiz.

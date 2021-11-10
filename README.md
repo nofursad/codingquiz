@@ -71,9 +71,24 @@ The main purpose of this website is to test the knowledge of the user on HTML, C
 
 ## Testing
 
-* I have tested the page in multiple browser (i.e., Safari, Chrome, Firefox) and make sure that it works fine in all of them.
-* I have tested the website for its responsiveness on different screen size device using the devtools device toolbar in chrome browser.
-* I have confirmed that all the text in all section of the website are readable and easy to understand.
+### 1. Functionality
+
+| **Test Label**  | **Test Action**  | **Expected Outcome**  | **Test Outcome**  |
+|---|---|---|---|
+| Quiz initial loadup  | Navigate to the quiz page  | Page should load with quiz rules  | Pass  |
+| Default quiz to be HTML Category  | Load the page and check the highlight button  | Html button to be highlighted  |  Pass |
+| Quiz Category Change  | Click CSS/Javascript button to change the quiz category  | User get question from selected category  | Pass  |
+|Quiz Timer | Check the 30 sec timer in quiz | User to move to next question if no response in 30 sec | Pass |
+  
+### 2. Browser Compatibility
+ Testing has been carried out on the following browsers :
+* Chrome Version 95.0.4638.69 (Official Build) (64-bit)
+* Firefox Version 94.0.1 (64-bit)
+* Edge Version 95.0.1020.44 (Official build) (64-bit)
+* Safari on macOS Big Sur Ver 11.6.1 (Safari Version 15.1 (16612.2.9.1.30, 16612))
+
+### 3. Responsiveness
+* I have tested the website for its responsiveness on different screen size device using the devtools device toolbar in chrome browser.I have tested for very small screen (iPhone 5 with width 320px) and very large screen (5k iMac Pro with resolution 5120 x 2880 px).* I have confirmed that all the text in all section of the website are readable and easy to understand.
 
 ---
 
