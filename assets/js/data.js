@@ -28,250 +28,250 @@ const questions = {
             ]
         },
         {
-            question: "A family's AirBnB experience goes very wrong.",
+            question: "How can you make a bulleted list?",
             answers: [
-                { text: "The Shining", correct: true },
-                { text: "Room 237", correct: false },
-                { text: "Cabin in the Woods", correct: false },
-                { text: "The Evil Dead", correct: false }
+                { text: "<ul>", correct: true },
+                { text: "<dl>", correct: false },
+                { text: "<ol>", correct: false },
+                { text: "<list>", correct: false }
             ]
         },
         {
-            question: "A series of naps.",
+            question: "What is the correct HTML for making a checkbox?",
             answers: [
-                { text: "The Matrix", correct: false },
-                { text: "Avatar", correct: false },
-                { text: "Sucker Punch", correct: false },
-                { text: "Inception", correct: true }
+                { text: "<check>", correct: false },
+                { text: "<input type='check'>", correct: false },
+                { text: "<checkbox>", correct: false },
+                { text: "<input type='checkbox'>", correct: true }
             ]
         },
         {
-            question: "Cancer survivor never loses his sense of humor.",
+            question: "Which HTML attribute specifies an alternate text for an image, if the image cannot be displayed?",
             answers: [
-                { text: "50/50", correct: false },
-                { text: "Deadpool", correct: true },
-                { text: "The fault in our Stars", correct: false },
-                { text: "Bucket List", correct: false }
+                { text: "longdesc", correct: false },
+                { text: "alt", correct: true },
+                { text: "src", correct: false },
+                { text: "title", correct: false }
             ]
         },
         {
-            question: "Woman abandons all her standards to win back a horny teenager with greasy hair.",
+            question: "Which HTML element is used to specify a footer for a document or section?",
             answers: [
-                { text: "Grease", correct: true },
-                { text: "Loser", correct: false },
-                { text: "American Pie", correct: false },
-                { text: "Not Another Teen Movie", correct: false }
+                { text: "<footer>", correct: true },
+                { text: "<bottom>", correct: false },
+                { text: "<section>", correct: false },
+                { text: "<foot>", correct: false }
             ]
         },
         {
-            question: "A depressed office worker joins a cult and destabilizes the government.",
+            question: "In HTML, onblur and onfocus are:",
             answers: [
-                { text: "Fight Club", correct: false },
-                { text: "V for Vendetta", correct: false },
-                { text: "Blade Runner", correct: false },
-                { text: "The Matrix", correct: true }
+                { text: "HTML elements", correct: false },
+                { text: "Event attributes", correct: true },
+                { text: "Style attributes", correct: false },
+                { text: "None of above", correct: false }
             ]
         },
         {
-            question: "Divorced man discovers he is trans, loses custody of his children.",
+            question: "In HTML, which attribute is used to specify that an input field must be filled out?",
             answers: [
-                { text: "Big Momma's House", correct: false },
-                { text: "White Chicks", correct: false },
-                { text: "Mrs Doubtfire", correct: true },
-                { text: "Mr Nanny", correct: false }
+                { text: "formvalidate", correct: false },
+                { text: "validate", correct: false },
+                { text: "required", correct: true },
+                { text: "placeholder", correct: false }
             ]
         },
         {
-            question: "A beautiful princess gets catfished.",
+            question: "Which HTML element defines navigation links?",
             answers: [
-                { text: "Beauty and the Beast", correct: false },
-                { text: "Cinderella", correct: false },
-                { text: "Shrek", correct: false },
-                { text: "Aladdin", correct: true }
+                { text: "<navigate>", correct: false },
+                { text: "<button>", correct: false },
+                { text: "<navigation>", correct: false },
+                { text: "<nav>", correct: true }
             ]
         }
     ],
     css: [
         {
-            question: "CSS Boy spends 7 years being the 3rd wheel.",
+            question: "What does CSS stand for?",
             answers: [
-                { text: "Harry Potter and the Deathly Hollows", correct: false },
-                { text: "Twilight", correct: true },
-                { text: "Sherlock Holmes", correct: false },
-                { text: "Star Wars a New Hope", correct: false }
+                { text: "Computer Style Sheets", correct: false },
+                { text: "Cascading Style Sheets", correct: true },
+                { text: "Colorful Style Sheets", correct: false },
+                { text: "Creative Style Sheets", correct: false }
             ]
         },
         {
-            question: "Talking frog convinces son to kill his dad.",
+            question: "What is the correct HTML for referring to an external style sheet?",
             answers: [
-                { text: "The Princess and the Frog", correct: false },
-                { text: "Star Wars the Empire Strikes Back", correct: true },
-                { text: "The Muppets Christmas Carol", correct: false },
-                { text: "Shrek", correct: false }
+                { text: "<style src='mystyle.css'>", correct: false },
+                { text: "<stylesheet>mystyle.css</stylesheet>", correct: false },
+                { text: "<link rel='StyleSheet' type='text/css' href='mystyle.css'>", correct: true },
+                { text: "None of above", correct: false }
             ]
         },
         {
-            question: "A guy that is alone in the woods kisses a dead body while 7 other guys watch.",
+            question: "Where in an HTML document is the correct place to refer to an external style sheet?",
             answers: [
-                { text: "Sleeping Beauty", correct: false },
-                { text: "Sleepy Hollow", correct: false },
-                { text: "Snow White and the Seven dwarfs", correct: true },
-                { text: "The Corpse Bride", correct: false }
+                { text: "In the <body> section", correct: false },
+                { text: "Before <head> element", correct: false },
+                { text: "In the <head> section", correct: true },
+                { text: "At the end of the document", correct: false }
             ]
         },
         {
-            question: "A family's AirBnB experience goes very wrong.",
+            question: "Which HTML tag is used to define an internal style sheet?",
             answers: [
-                { text: "The Shining", correct: true },
-                { text: "Room 237", correct: false },
-                { text: "Cabin in the Woods", correct: false },
-                { text: "The Evil Dead", correct: false }
+                { text: "<style>", correct: true },
+                { text: "<css>", correct: false },
+                { text: "<script>", correct: false },
+                { text: "None of above", correct: false }
             ]
         },
         {
-            question: "A series of naps.",
+            question: "Which HTML attribute is used to define inline styles?",
             answers: [
-                { text: "The Matrix", correct: false },
-                { text: "Avatar", correct: false },
-                { text: "Sucker Punch", correct: false },
-                { text: "Inception", correct: true }
+                { text: "font", correct: false },
+                { text: "styles", correct: false },
+                { text: "class", correct: false },
+                { text: "style", correct: true }
             ]
         },
         {
-            question: "Cancer survivor never loses his sense of humor.",
+            question: "Which property is used to change the background color?",
             answers: [
-                { text: "50/50", correct: false },
-                { text: "Deadpool", correct: true },
-                { text: "The fault in our Stars", correct: false },
-                { text: "Bucket List", correct: false }
+                { text: "bgcolor", correct: false },
+                { text: "background-color", correct: true },
+                { text: "color", correct: false },
+                { text: "None of above", correct: false }
             ]
         },
         {
-            question: "Woman abandons all her standards to win back a horny teenager with greasy hair.",
+            question: "Which CSS property is used to change the text color of an element?",
             answers: [
-                { text: "Grease", correct: true },
-                { text: "Loser", correct: false },
-                { text: "American Pie", correct: false },
-                { text: "Not Another Teen Movie", correct: false }
+                { text: "color", correct: true },
+                { text: "text-color", correct: false },
+                { text: "fgcolor", correct: false },
+                { text: "bgcolor", correct: false }
             ]
         },
         {
-            question: "A depressed office worker joins a cult and destabilizes the government.",
+            question: "Which CSS property controls the text size?",
             answers: [
-                { text: "Fight Club", correct: false },
-                { text: "V for Vendetta", correct: false },
-                { text: "Blade Runner", correct: false },
-                { text: "The Matrix", correct: true }
+                { text: "font-style", correct: false },
+                { text: "text-size", correct: false },
+                { text: "text-style", correct: false },
+                { text: "font-size", correct: true }
             ]
         },
         {
-            question: "Divorced man discovers he is trans, loses custody of his children.",
+            question: "How do you make each word in a text start with a capital letter?",
             answers: [
-                { text: "Big Momma's House", correct: false },
-                { text: "White Chicks", correct: false },
-                { text: "Mrs Doubtfire", correct: true },
-                { text: "Mr Nanny", correct: false }
+                { text: "transform:capitalize", correct: false },
+                { text: "You can't do that with CSS", correct: false },
+                { text: "text-transform:capitalize", correct: true },
+                { text: "text-style:capitalize", correct: false }
             ]
         },
         {
-            question: "A beautiful princess gets catfished.",
+            question: "Which property is used to change the font of an element?",
             answers: [
-                { text: "Beauty and the Beast", correct: false },
-                { text: "Cinderella", correct: false },
-                { text: "Shrek", correct: false },
-                { text: "Aladdin", correct: true }
+                { text: "font", correct: false },
+                { text: "font-weight", correct: false },
+                { text: "font-style", correct: false },
+                { text: "font-family", correct: true }
             ]
         }
     ],
     javascript: [
         {
-            question: "JAVASCRIPT Boy spends 7 years being the 3rd wheel.",
+            question: "Where is the correct place to insert a JavaScript?",
             answers: [
-                { text: "Harry Potter and the Deathly Hollows", correct: false },
-                { text: "Twilight", correct: false },
-                { text: "Sherlock Holmes", correct: true },
-                { text: "Star Wars a New Hope", correct: false }
+                { text: "Both the <head> and the <body> are correct", correct: true },
+                { text: "The <head> section", correct: false },
+                { text: "The <body> section", correct: false },
+                { text: "Before the <head> section", correct: false }
             ]
         },
         {
-            question: "Talking frog convinces son to kill his dad.",
+            question: "What is the correct syntax for referring to an external script called 'xxx.js'?",
             answers: [
-                { text: "The Princess and the Frog", correct: false },
-                { text: "Star Wars the Empire Strikes Back", correct: true },
-                { text: "The Muppets Christmas Carol", correct: false },
-                { text: "Shrek", correct: false }
+                { text: "<script name='xxx.js'>", correct: false },
+                { text: "<script src='xxx.js'>", correct: true },
+                { text: "<script href='xxx.js'>", correct: false },
+                { text: "<script link='xxx.js'>", correct: false }
             ]
         },
         {
-            question: "A guy that is alone in the woods kisses a dead body while 7 other guys watch.",
+            question: "How do you write 'Hello World' in an alert box?",
             answers: [
-                { text: "Sleeping Beauty", correct: false },
-                { text: "Sleepy Hollow", correct: false },
-                { text: "Snow White and the Seven dwarfs", correct: true },
-                { text: "The Corpse Bride", correct: false }
+                { text: "alertBox('Hello World');", correct: false },
+                { text: "msg('Hello World');", correct: false },
+                { text: "alert('Hello World');", correct: true },
+                { text: "msgBox('Hello World');", correct: false }
             ]
         },
         {
-            question: "A family's AirBnB experience goes very wrong.",
+            question: "How do you create a function in JavaScript?.",
             answers: [
-                { text: "The Shining", correct: true },
-                { text: "Room 237", correct: false },
-                { text: "Cabin in the Woods", correct: false },
-                { text: "The Evil Dead", correct: false }
+                { text: "function myFunction()", correct: true },
+                { text: "function = myFunction()", correct: false },
+                { text: "function : myFunction()", correct: false },
+                { text: "let function = myFunction()", correct: false }
             ]
         },
         {
-            question: "A series of naps.",
+            question: "How do you call a function named 'myFunction'?",
             answers: [
-                { text: "The Matrix", correct: false },
-                { text: "Avatar", correct: false },
-                { text: "Sucker Punch", correct: false },
-                { text: "Inception", correct: true }
+                { text: "function myFunction", correct: false },
+                { text: "call function myFunction()", correct: false },
+                { text: "call myFunction()", correct: false },
+                { text: "myFunction()", correct: true }
             ]
         },
         {
-            question: "Cancer survivor never loses his sense of humor.",
+            question: "How to write an IF statement in JavaScript?",
             answers: [
-                { text: "50/50", correct: false },
-                { text: "Deadpool", correct: true },
-                { text: "The fault in our Stars", correct: false },
-                { text: "Bucket List", correct: false }
+                { text: "if i=5 then", correct: false },
+                { text: "if (i==5)", correct: true },
+                { text: "if i==5 then", correct: false },
+                { text: "if i=5", correct: false }
             ]
         },
         {
-            question: "Woman abandons all her standards to win back a horny teenager with greasy hair.",
+            question: "How does a FOR loop start?",
             answers: [
-                { text: "Grease", correct: true },
-                { text: "Loser", correct: false },
-                { text: "American Pie", correct: false },
-                { text: "Not Another Teen Movie", correct: false }
+                { text: "for(i=0;i<=5;i++)", correct: true },
+                { text: "for(i<=5;i++)", correct: false },
+                { text: "for(i=0:i<=5)", correct: false },
+                { text: "for i=0 to 5", correct: false }
             ]
         },
         {
-            question: "A depressed office worker joins a cult and destabilizes the government.",
+            question: "How can you add a comment in a JavaScript?",
             answers: [
-                { text: "Fight Club", correct: false },
-                { text: "V for Vendetta", correct: false },
-                { text: "Blade Runner", correct: false },
-                { text: "The Matrix", correct: true }
+                { text: "<!-- This is a comment -->", correct: false },
+                { text: "`This is a comment`", correct: false },
+                { text: "/**This is a comment*/", correct: false },
+                { text: "//This is a comment", correct: true }
             ]
         },
         {
-            question: "Divorced man discovers he is trans, loses custody of his children.",
+            question: "How do you round the number 7.25, to the nearest integer?",
             answers: [
-                { text: "Big Momma's House", correct: false },
-                { text: "White Chicks", correct: false },
-                { text: "Mrs Doubtfire", correct: true },
-                { text: "Mr Nanny", correct: false }
+                { text: "rnd(7.25)", correct: false },
+                { text: "Math.round(7.25)", correct: true },
+                { text: "round(7.25)", correct: false },
+                { text: "Math.rnd(7.25)", correct: false }
             ]
         },
         {
-            question: "A beautiful princess gets catfished.",
+            question: "Which event occurs when the user clicks on an HTML element?",
             answers: [
-                { text: "Beauty and the Beast", correct: false },
-                { text: "Cinderella", correct: false },
-                { text: "Shrek", correct: false },
-                { text: "Aladdin", correct: true }
+                { text: "onchange", correct: false },
+                { text: "onmouseclick", correct: false },
+                { text: "onmouseover", correct: false },
+                { text: "onclick", correct: true }
             ]
         }
     ]
