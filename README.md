@@ -15,19 +15,34 @@ A live demo of this website can be found [here](https://nofursad.github.io/codin
 ![Responsiveness](readme/responsivness.png)
 
 ---
+## Index - Table of Contents
+* [User Experience (UX)](#user-experience-ux)
+* [Technologies Used](#technologies)
+* [Features](#features)
+* [Testing](#testing)
+* [Deployment](#deployment)
+* [Credits](#credits)
 
-## Strategy
+## User Experience (UX)
 
 The main purpose of this website is to test the knowledge of the user on HTML, CSS and Javascript programming language. This website is targeted towards the coder like myself where they can check their knowledge on the coding language.
 
 ---
 
 ## Technologies
+### Languages Used
+1. [HTML5](https://en.wikipedia.org/wiki/HTML5)
+2. [CSS3](https://en.wikipedia.org/wiki/CSS#CSS_3)
+3. [Javascript](https://en.wikipedia.org/wiki/JavaScript)
 
-1. HTML5
-2. CSS3
-3. Javascript
-
+### Frameworks, Libraries & Programs Used
+* [SweetAlert2](https://sweetalert2.github.io/): was used to replace the javascirpt popup boxes with more responsive and customizable popup boxes.
+* [Font Awesome](https://fontawesome.com/): was used to add scalable vector icons for UX purposes.
+* [Google Fonts](https://fonts.google.com/): was used to import the Fira Code fonts into the stylesheet file (style.css) which was the default font for this page.
+* [Git](https://git-scm.com/): was used for the purpose of version control of the website.
+* [GitHub](https://github.com/): was used as the respository for the projects code after being pushed from Git.
+* [Balsamiq](https://balsamiq.com/): was used to design the wireframes of the website.
+* [Preview](https://en.wikipedia.org/wiki/Preview_(macOS)): was used to crop the images that is used in readme file.
 ---
 
 ## Features
@@ -79,6 +94,7 @@ The main purpose of this website is to test the knowledge of the user on HTML, C
 | Default quiz to be HTML Category  | Load the page and check the highlight button  | Html button to be highlighted  |  Pass |
 | Quiz Category Change  | Click CSS/Javascript button to change the quiz category  | User get question from selected category  | Pass  |
 |Quiz Timer | Check the 30 sec timer in quiz | User to move to next question if no response in 30 sec | Pass |
+|Popup SweetAlert|loaded the page, selected correct and incorrect answer and finished the quiz| Popup alert with relevant message| Pass|
   
 ### 2. Browser Compatibility
  Testing has been carried out on the following browsers :
