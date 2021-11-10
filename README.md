@@ -1,4 +1,4 @@
-![Coding Quiz](ReadMe/cqLogo.png)
+![Coding Quiz](readme/cqLogo.png)
 
 # Coding Quiz
 
@@ -12,7 +12,7 @@ A live demo of this website can be found [here](https://nofursad.github.io/codin
 
 [GitHub Repo](https://github.com/nofursad/codingquiz.git)
 
-![Responsiveness](readme/Demo.png)
+![Responsiveness](readme/responsivness.png)
 
 ---
 

@@ -97,7 +97,6 @@ main {
 
 #answerOptionContainer {
     height: 350px;
-    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;;
 }
 
 .options {
@@ -118,16 +117,10 @@ main {
     transform: scale(1.02);
 }
 
-#timeLine {
-    height: 2px;
-    width: 0%;
-    background-color: #007bff;
-}
-
 #scoreBoard {
     display: flex;
     text-align: left;
-    padding: 10px 10px;
+    padding: 0px 10px;
 }
 
 
@@ -209,7 +202,7 @@ footer {
 
     #questionContainer {
         height: 100px;
-        padding: 20px 5px;
+        padding: 10px 5px;
         font-size: 1.3rem;
     }
 
@@ -236,16 +229,16 @@ footer {
     }
 
     main {
-        height: 310px;
+        height: auto;
     }
 
     #questionContainer {
         font-size: 1.0rem;
-        height: 65px;
+        height: auto;
     }
 
     #answerOptionContainer {
-        height: 220px;
+        height: auto;
     }
 
     .options {
@@ -256,6 +249,9 @@ footer {
 
     #scoreBoard {
         font-size: 0.7rem;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px 10px;
     }
 
     .swal2-popup {
