@@ -115,7 +115,7 @@
      que.innerText = questions[quizCat][queNumInt].question;
      let ansOpts = document.getElementsByClassName("answers");
      for (let x = 0; x < 4; x++) {
-         ansOpts[x].innerHTML = questions[quizCat][queNumInt].answers[x].text;
+         ansOpts[x].innerText = questions[quizCat][queNumInt].answers[x].text;
          ansBtns[x].dataset.correct = questions[quizCat][queNumInt].answers[x].correct;
      }
  }
