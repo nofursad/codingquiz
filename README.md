@@ -29,7 +29,7 @@ The main purpose of this website is to test the knowledge of the user on HTML, C
 
 ---
 
-## Technologies
+## Technologies Used
 ### Languages Used
 1. [HTML5](https://en.wikipedia.org/wiki/HTML5)
 2. [CSS3](https://en.wikipedia.org/wiki/CSS#CSS_3)
@@ -118,15 +118,15 @@ I went back and corrected that in script.js file by adding semicolon wherever it
 No Unfixed Bugs.  
   
 ## Validator Testing
-* **HTML**: I tested the code through the official **W3C validator** and all test pass without any error.
+* [HTML Validator](https://validator.w3.org/): I tested the code through the official **W3C validator** and all test pass without any error.
 
 ![Html Validator](readme/htmlValidator.png)
   
-* **CSS**:  I tested the code through the official **W3C (Jigsaw) validator** and all test pass without any error.
+* [CSS](https://jigsaw.w3.org/css-validator/):  I tested the code through the official **W3C (Jigsaw) validator** and all test pass without any error.
 
 ![Css Validator](readme/cssValidator.png)
   
-* **Javascript**: I tested the javascript code throught the website **JSHINT.COM** and all code pass without any error.
+* [Javascript](https://jshint.com/): I tested the javascript code throught the website **JSHINT.COM** and all code pass without any error.
 
 ![Js Validator](readme/jsValidator.png)
   
@@ -135,7 +135,7 @@ No Unfixed Bugs.
 ![Accessibility](readme/accessibilitye.png)
 
  ## **Deployment**
-I deployed the website on GitHub pages via the following:
+**Steps to Deploy this site**
 
 1. From the projects repository go to the **settings** tab which will take you to settings page.
 1. On the left hand menu near the bottom click on the **pages** link which will open the GitHub Pages tab.
@@ -145,3 +145,10 @@ I deployed the website on GitHub pages via the following:
 1. Once the site is published to the link provided, the message will change to **Your site is published** following with the link to access the page.
 
 You can access the live site via the following link [A Game of Snake](https://gibbo101.github.io/snake-game/).
+
+**Cloning the repository to work on duplicate file**
+1. Go to the [https://github.com/nofursad/codingquiz.git](https://github.com/nofursad/codingquiz.git) to access the repository on GitHub.
+2. Click on the "Code" button which will bring a dropdown box with more option.
+3. Click on the HTTPs and click on copy icon next to the link.
+4. Open a GitBash terminal / build-in terminal and open a directory where you want to clone it.
+5. Type "git clone" them paste in the link that was copied from git and hit Enter to start the cloning process. 
