@@ -24,7 +24,7 @@
   * Object with the sweetAlert function to be called on various occation
   */
  const sweetAlert = {
-     initialAlert : function() {
+     initialAlert: function () {
          Swal.fire({
              title: "<strong><u>Some Rules of this Quiz</u></strong>",
              icon: "info",
@@ -40,43 +40,40 @@
              confirmButtonText:
                  "<i class='fa fa-thumbs-up'></i> Lets Start!",
          }).then((result) => {
-            if (result.isConfirmed) {
-                clearInterval(counter);
-                starTimer(timerValue);
-                // clearInterval(counterLine);
-                // starTimerLine(widthValue, mainContWidth);
-            }
-          })
+             if (result.isConfirmed) {
+                 clearInterval(counter);
+                 starTimer(timerValue);
+             }
+         })
      },
-     correctAnsAlert : function() {
+     correctAnsAlert: function () {
          Swal.fire({
              icon: "success",
              title: "Good job!",
              text: "You selected the Correct Answer!",
              confirmButtonColor: "rgba(60,179,113, 0.7)"
          }).then((result) => {
-            if (result.isConfirmed) {
-                clearInterval(counter);
-                starTimer(timerValue);
-            }
-          })
+             if (result.isConfirmed) {
+                 clearInterval(counter);
+                 starTimer(timerValue);
+             }
+         })
      },
-     incorrectAnsAlert : function() {
+     incorrectAnsAlert: function () {
          Swal.fire({
              icon: "error",
              title: "Oops!",
              text: "You selected the Incorrect Answer!",
              confirmButtonColor: "rgba(220,20,60, 0.6)"
          }).then((result) => {
-            if (result.isConfirmed) {
-                clearInterval(counter);
-                starTimer(timerValue);
-            }
-          })
+             if (result.isConfirmed) {
+                 clearInterval(counter);
+                 starTimer(timerValue);
+             }
+         })
      },
-     congratulation: function(userScore) {
+     congratulation: function (userScore) {
          Swal.fire({
-             // title: "<strong><u>Some Rules of this Quiz</u></strong>",
              title: "<h1></strong><i style='color:#66C7F4' class='fas fa-crown'></i></h1>",
              html:
                  `You have completed the Quiz!<br>` +
@@ -89,11 +86,25 @@
              confirmButtonText:
                  "<i class='fa fa-thumbs-up'></i> Lets try again!",
          }).then((result) => {
+             if (result.isConfirmed) {
+                 clearInterval(counter);
+                 starTimer(timerValue);
+             }
+         })
+     },
+     timeOver: function (){
+        Swal.fire({
+            icon: "error",
+            title: "Oops!",
+            html: "Your Thirty Seconds are over.<br>"+
+                  "Let's go to next question",
+            confirmButtonColor: "rgba(220,20,60, 0.6)"
+        }).then((result) => {
             if (result.isConfirmed) {
                 clearInterval(counter);
                 starTimer(timerValue);
             }
-          })
+        })
      }
  }
  
@@ -107,7 +118,7 @@
      let que = document.getElementById("question");
      que.innerText = questions[quizCat][queNumInt].question;
      let ansOpts = document.getElementsByClassName("answers");
-     for (let x = 0; x < 4; x++){
+     for (let x = 0; x < 4; x++) {
          ansOpts[x].innerHTML = questions[quizCat][queNumInt].answers[x].text;
          ansBtns[x].dataset.correct = questions[quizCat][queNumInt].answers[x].correct;
      }
@@ -125,11 +136,13 @@
          ansBtn.addEventListener("click", function () {
              let answer = ansBtn.getAttribute("data-correct");
              if (answer === "true") {
+                 clearInterval(counter);
                  sweetAlert.correctAnsAlert();
                  queNum.innerText = parseInt(queNum.innerText) + 1;
                  score.innerText = parseInt(score.innerText) + 1;
                  queNumInt++;
              } else {
+                 clearInterval(counter);
                  sweetAlert.incorrectAnsAlert();
                  queNum.innerText = parseInt(queNum.innerText) + 1;
                  queNumInt++;
@@ -151,7 +164,7 @@
  /**
   * Function to identify the category of the quiz that is selected buy user.
   */
- function queCatSelect(quizCat){
+ function queCatSelect(quizCat) {
      if (quizCat === "html") {
          htmlBtn.className = "btnCategory btnActive";
          cssBtn.className = "btnCategory";
@@ -179,56 +192,56 @@
   */
  function runQuiz(quizCat, queNumInt) {
      disQue(quizCat, queNumInt);
-     starTimer(timerValue);
+    //  starTimer(timerValue);
  }
-
+ 
  /**
   * Count down timer function to be used in each question.
   */
- function starTimer(time){
+ function starTimer(time) {
      counter = setInterval(countTimer, 1000);
-     function countTimer(){
+     function countTimer() {
          timer.innerText = time;
          time--;
-         if(time < 9) {
+         if (time < 9) {
              let addZero = timer.innerText;
              timer.innerText = "0" + addZero;
          }
-         if(time < 0){
+         if (time < 0) {
              clearInterval(counter);
              timer.innerText = "00";
-             alert("Sorry, your time is over.")
+             sweetAlert.timeOver();
              queNum.innerText = parseInt(queNum.innerText) + 1;
              queNumInt++;
              runQuiz(quizCat, queNumInt);
          }
      }
  }
-
-//  /**
-//   * Timer line that goes alone with time indicating the time
-//   */
-//   function starTimerLine(time, mainContWidth){
-//     counterLine = setInterval(countTimer, 100);
-//     function countTimer(){
-//         time += 1;
-//         timeLine.style.width = time + "px";
-//         if(time > mainContWidth) {
-//             clearInterval(counterLine);
-//         }
-//     }
-// }
+ 
+ //  /**
+ //   * Timer line that goes alone with time indicating the time
+ //   */
+ //   function starTimerLine(time, mainContWidth){
+ //     counterLine = setInterval(countTimer, 100);
+ //     function countTimer(){
+ //         time += 1;
+ //         timeLine.style.width = time + "px";
+ //         if(time > mainContWidth) {
+ //             clearInterval(counterLine);
+ //         }
+ //     }
+ // }
  
  /**
   * Waiting for DOM content to finish loading before running the quiz.
   * Add the event listener to btnCategory class elements to get the 
   * quiz category to run the quiz.
   */
- document.addEventListener("DOMContentLoaded", function(){
+ document.addEventListener("DOMContentLoaded", function () {
      sweetAlert.initialAlert();
      let actQueCats = document.getElementsByClassName("btnCategory");
-     for (let actQueCat of actQueCats){
-         actQueCat.addEventListener("click", function(){
+     for (let actQueCat of actQueCats) {
+         actQueCat.addEventListener("click", function () {
              quizCat = actQueCat.getAttribute("data-type");
              queCatSelect(quizCat);
              runQuiz(quizCat, queNumInt);
