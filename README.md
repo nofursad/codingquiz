@@ -24,18 +24,18 @@ A live demo of this website can be found [here](https://nofursad.github.io/codin
 * [Credits](#credits)
 
 ## User Experience (UX)
-* ### User Stories
-  1. First time User
+### User Stories
+1. First time User
    * As a first time user, I want to be able to understand the main purpose of the website.
    * I want to be able to easily use the website for the purpose it was build for.
    * I want to be able to do the quiz of different category.
    * I want to be able to check my scores after I answered all the questions of the quiz.
   
-  2. Returning User
+2. Returning User
    * As a returning visiter, I want to be able to quickly take the quiz.
    * I want to be able to check my scores.
 
-  3. Frequent User
+3. Frequent User
    * As a frequent user, I want to be able to store my scores.
    * I want to be able to compare my scores with my previous scores.
 
@@ -97,11 +97,11 @@ A live demo of this website can be found [here](https://nofursad.github.io/codin
 
 ### **Features which could be implemented in the future**
 * Progress Bar for timer
- * A progress bar can be added in the scoreboard area as a visual representation of the time available to user to answer the questions.
+  * A progress bar can be added in the scoreboard area as a visual representation of the time available to user to answer the questions.
 * Icon and Popup Box for more Information
- * A icon can be added on the page which will bring the popup box with more information and option for the user.
+  * A icon can be added on the page which will bring the popup box with more information and option for the user.
 * Option to Store scores
- * An user can give their name and the score can be stored so when user take the quiz again, they can compare the scores.
+  * An user can give their name and the score can be stored so when user take the quiz again, they can compare the scores.
 ---
 
 ## Testing
@@ -131,8 +131,9 @@ A live demo of this website can be found [here](https://nofursad.github.io/codin
 ## Bugs
 
 ### **Solved Bugs**
-When i tested the javascript codes in the jshint.com, I found out that I was missing some of the semicolon after finishing my code.  
-I went back and corrected that in script.js file by adding semicolon wherever it was missing.  
+* When I tested the javascript codes in the jshint.com, I found out that I was missing some of the semicolon after finishing my code.  
+I went back and corrected that in script.js file by adding semicolon wherever it was missing.
+* Timer was not functioning properly and didn't reset itself with a new question. Went through the clearInterval function in W3School. Used the function and all working fine.
   
 ### **Unfixed Bug**
 No Unfixed Bugs.  
